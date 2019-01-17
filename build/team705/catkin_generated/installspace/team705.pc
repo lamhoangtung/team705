@@ -1,8 +1,0 @@
-prefix=/home/linus/team705/install
-
-Name: team705
-Description: Description of team705
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/linus/team705/install/lib 
-Requires: 
