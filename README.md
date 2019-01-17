@@ -1,13 +1,9 @@
 # team705 - HAUI.notTrashCar
 Package của Team 705 - HAUI.notTrashCar cho vòng loại Cuộc đua số 2018 - 2019
 
-
-# NOTE: README này là bản viết tạm thời, nội dung trong README này chưa được xác nhận chạy thành công.
-
-
 ## Dependency
 - Python 3.6+ (recommend Python 3.6.7)
-- CUDA, CuDNN, cmake, opencv-python, ros_bridge
+- CUDA, CuDNN, cmake, opencv-python (`pip3 install opencv-python`), ros_bridge
 - Darknet binary cho model object detection: clone repo https://github.com/lamhoangtung/darknet, `Makefile` đã được chỉnh sửa sẵn, chỉ cần `make` rồi copy file `libdarknet.so` vào thư mục `/src/team705/model/` và đổi tên thành `darknet.so`. 
 ```
 git clone https://github.com/lamhoangtung/darknet ~/darknet/
