@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(team1)
+project(team705)
 
 add_compile_options(-std=c++11)
 
