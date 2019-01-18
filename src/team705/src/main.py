@@ -1,13 +1,24 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+import rospkg
 import rospy
+import sys
+import os
 from sensor_msgs.msg import CompressedImage
+
+try:
+    os.chdir(os.path.dirname(__file__))
+    os.system('clear')
+    print("\nWait for initial setup, please don't connect anything yet...\n")
+    sys.path.remove('/opt/ros/lunar/lib/python2.7/dist-packages')
+except:
+    pass
+
 from std_msgs.msg import Float32
 import cv2
 import numpy as np
 from ctypes import *
 import math
 import random
-import os
 import time
 
 
@@ -38,7 +49,7 @@ class METADATA(Structure):
     _fields_ = [("classes", c_int),
                 ("names", POINTER(c_char_p))]
 
-import rospkg
+
 rospack = rospkg.RosPack()
 path = rospack.get_path('team705')
 os.chdir(path)
@@ -636,7 +647,7 @@ def image_callback(data):
                 rock = width * height
                 print('Size: ', rock)
             cv2.rectangle(img, (x_top, y_top), (x_bot, y_bot), (0, 255, 0), 2)
-    
+
     # video_out.write(annotated_image)
     cv2.imshow('team705_object_detector', img)
     cv2.waitKey(1)
